@@ -1,16 +1,16 @@
 # annoying_alarm
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+kalo mau pake image di programnya buat image jadi constant dulu di ```lib\core\utils\image_constant.dart``` terus pake CustomImageView() buat nampilin
 
-A few resources to get you started if this is your first Flutter project:
+contoh :
+```
+CustomImageView(
+  imagePath: ImageConstant.imgLogoLandingPage,
+  height: 214.0,
+  width: 252.0,
+)
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
