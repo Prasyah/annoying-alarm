@@ -7,6 +7,8 @@ export 'package:annoying_alarm/core/utils/logger.dart';
 export 'package:annoying_alarm/core/utils/navigator_service.dart';
 export 'package:annoying_alarm/core/utils/pref_utils.dart';
 export 'package:annoying_alarm/core/utils/size_utils.dart';
+export 'package:annoying_alarm/localization/app_localization.dart';
+export 'package:annoying_alarm/routes/app_routes.dart';
 
 export 'package:annoying_alarm/theme/custom_text_style.dart';
 export 'package:annoying_alarm/theme/theme_helper.dart';
