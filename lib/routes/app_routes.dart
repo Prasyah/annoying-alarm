@@ -16,7 +16,7 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> get routes => {
     landingScreen: LandingPage.builder,
-    // homeScreen: HomeScreen.builder,
+    homeScreen: HomeScreen.builder,
     appNavigationScreen: AppNavigationScreen.builder,
     initialRoute: LandingPage.builder
   };

@@ -15,4 +15,15 @@ class ImageConstant {
 
   static String imgIconBarStat =
     '$imagePath/icon_stat.png';
+
+  //Home images
+
+  static String imgIconResumePause =
+    '$imagePath/icon_pauseRessume.png';
+
+  static String thumbImgMazeGame =
+    '$imagePath/img_mazeGame.png';
+
+  static String thumbProfile =
+    '$imagePath/thumb_profile.png';
 }
