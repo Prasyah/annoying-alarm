@@ -22,7 +22,7 @@ class MinigameselectionItemWidget extends StatelessWidget {
       showCheckmark: false,
       labelPadding: EdgeInsets.zero,
       label: Text(
-        minigameselectionItemModelObj.chipThree1!,
+        minigameselectionItemModelObj.chipThree1 ?? '',
         style: TextStyle(
           color: theme.colorScheme.primary,
           fontSize: 14.fSize,

@@ -15,18 +15,21 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<UpdateChipViewEvent>(_updateChipView);
   }
 
-  _onInitialize(
+   _onInitialize(
     HomeInitialEvent event,
     Emitter<HomeState> emit,
   ) async {
-    emit(
-      state.copyWith(
-        homeInitialModelObj: state.homeInitialModelObj?.copyWith(
-          homeOneItemList: fillHomeOneItemList(),
-          minigameselectionItemList: fillMinigameselectionItemList(),
-        ),
-      ),
+    // Prepare the initialized model with the lists
+    final initializedModel = state.homeInitialModelObj?.copyWith(
+      homeOneItemList: fillHomeOneItemList(),
+      minigameselectionItemList: fillMinigameselectionItemList(),
     );
+
+    // Debug log to verify list initialization
+    print(initializedModel?.minigameselectionItemList.map((item) => item.chipThree).toList());
+
+    // Emit the updated state with the initialized model
+    emit(state.copyWith(homeInitialModelObj: initializedModel));
   }
 
   _updateChipView(

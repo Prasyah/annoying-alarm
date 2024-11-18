@@ -2,16 +2,15 @@ import 'package:equatable/equatable.dart';
 
 // ignore_for_file: must_be_immutable
 class MinigameselectionItemModel extends Equatable {
-  MinigameselectionItemModel(
-        {this.chipThree, this.chipThree1, this.isSelected}) {  
-      chipThree = chipThree ?? "Maze";
-      chipThree1 = chipThree1 ?? "Maze";
-      isSelected = isSelected ?? false;
-    }
+  final String? chipThree;
+  final String? chipThree1;
+  final bool? isSelected;
 
-  String? chipThree;
-  String? chipThree1;
-  bool? isSelected;
+  MinigameselectionItemModel({
+    this.chipThree = "Maze", // Default value
+    this.chipThree1 = "Maze", // Default value
+    this.isSelected = false, // Default value
+  });
 
   MinigameselectionItemModel copyWith({
     String? chipThree,

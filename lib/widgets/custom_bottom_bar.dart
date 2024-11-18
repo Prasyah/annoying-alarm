@@ -21,19 +21,19 @@ class CustomBottomBarState extends State<CustomBottomBar> {
     BottomMenuModel(
       icon: ImageConstant.imgIconBarMenuAlarm,
       activeIcon: ImageConstant.imgIconBarMenuAlarm,
-      title: "Alarms",
+      title: "lbl_alarms".tr,
       type: BottomBarEnum.Alarms,
     ),
     BottomMenuModel(
       icon: ImageConstant.imgIconBarMenuGame, 
       activeIcon: ImageConstant.imgIconBarMenuGame, 
-      title: "Games",
+      title: "lbl_games".tr,
       type: BottomBarEnum.Games,
     ),
     BottomMenuModel(
       icon: ImageConstant.imgIconBarStat, 
       activeIcon: ImageConstant.imgIconBarStat, 
-      title: "Stats",
+      title: "lbl_stats".tr,
       type: BottomBarEnum.Stats
     )
   ];
@@ -63,27 +63,65 @@ class CustomBottomBarState extends State<CustomBottomBar> {
         items: List.generate(bottomMenuList.length, (index) {
           return BottomNavigationBarItem(
             icon: SizedBox(
-              width: 32.h,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomImageView(
-                    imagePath: bottomMenuList[index].icon,
-                    height: 26.h,
-                    width: double.maxFinite,
-                  ),
-                  SizedBox(
-                    width: double.maxFinite,
-                    child: Text(
+              width: 34.h,
+              child: SizedBox(
+                width: 34.h,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CustomImageView(
+                      imagePath: bottomMenuList[index].activeIcon,
+                      height: 24.h,
+                      width: 24.h,
+                      fit: BoxFit.contain,
+                    ),
+                    SizedBox(height: 4.h), // Spacing between icon and text
+                    Text(
                       bottomMenuList[index].title ?? "",
                       overflow: TextOverflow.ellipsis,
                       style: CustomTextStyle.bodySmallPrimary.copyWith(
-                        color: Color(0xFF000000),
+                        color: Color(0XFF000000),
                       ),
-                    )
-                  )
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2), // Shadow color
+                    spreadRadius: 3, // Spread radius for the shadow
+                    blurRadius: 6,   // Blur radius for smooth shadow
+                    offset: Offset(0, 3), // Position of shadow (x, y)
+                  ),
                 ],
+              ),
+              child: SizedBox(
+                width: 34.h,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CustomImageView(
+                      imagePath: bottomMenuList[index].activeIcon,
+                      height: 27.h,
+                      width: 27.h,
+                      fit: BoxFit.contain,
+                    ),
+                    SizedBox(height: 2.h), // Spacing between icon and text
+                    Text(
+                      bottomMenuList[index].title ?? "",
+                      overflow: TextOverflow.ellipsis,
+                      style: CustomTextStyle.bodySmallPrimary.copyWith(
+                        color: Color(0XFF000000),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             label: '',

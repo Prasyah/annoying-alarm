@@ -25,14 +25,14 @@ class AppNavigationScreen extends StatelessWidget {
           child: Scaffold(
             backgroundColor: const Color(0xFFFFFFFF),
             body: SizedBox(
-              width: 375.0, // Replace 375.h with standard double value if not using .h extension
+              width: 375.h,
               child: Column(
                 children: [
                   Container(
                     decoration: const BoxDecoration(color: Color(0xFFFFFFFF)),
                     child: const Column(
                       children: [
-                        const SizedBox(height: 10.0), // Replace 10.h with standard double value
+                        SizedBox(height: 10.0),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.0),
                           child: Text(
@@ -40,7 +40,7 @@ class AppNavigationScreen extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFF000000),
-                              fontSize: 20.0, // Replace 20.fSize with standard double value
+                              fontSize: 20.0,
                               fontFamily: 'Roboto',
                               fontWeight: FontWeight.w400,
                             ),
